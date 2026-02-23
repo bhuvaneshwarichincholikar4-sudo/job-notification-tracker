@@ -93,6 +93,20 @@
           </li>
         </ul>
       </footer>
+      <div class="modal" data-modal hidden>
+        <div class="modal__dialog" role="dialog" aria-modal="true">
+          <div class="modal__header">
+            <h2 class="heading-md modal__title" data-modal-title></h2>
+            <button type="button" class="btn btn--ghost" data-modal-close>Close</button>
+          </div>
+          <p class="body text-muted modal__company" data-modal-company></p>
+          <p class="body modal__description" data-modal-description></p>
+          <div class="modal__skills">
+            <span class="body text-muted">Skills for this role</span>
+            <div class="modal__skills-list" data-modal-skills></div>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="./app.js"></script>
   </body>
