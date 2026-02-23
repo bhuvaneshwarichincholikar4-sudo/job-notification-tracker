@@ -2,181 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Job Notification App – Design System Shell</title>
+    <title>Job Notification App – Shell</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles/components.css" />
   </head>
   <body>
     <div class="app-shell">
       <header class="top-bar">
-        <div class="top-bar__title">Job Notification App</div>
-        <div class="top-bar__progress">Step 1 / 4</div>
-        <div class="top-bar__status">
-          <span class="status-badge status-badge--not-started">Not Started</span>
+        <div class="top-bar__main">
+          <div class="top-bar__title-group">
+            <div class="top-bar__title">Job Notification App</div>
+            <div class="top-bar__progress">Step 1 / 5</div>
+          </div>
+          <div class="top-bar__right">
+            <div class="top-bar__status">
+              <span class="status-badge status-badge--not-started">Not Started</span>
+            </div>
+            <button
+              type="button"
+              class="top-bar__menu-toggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+            >
+              <span class="top-bar__menu-toggle-bar"></span>
+              <span class="top-bar__menu-toggle-bar"></span>
+            </button>
+          </div>
         </div>
+        <nav class="nav" data-nav>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/dashboard" data-route="/dashboard" data-nav-link class="nav__link"
+                >Dashboard</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="/saved" data-route="/saved" data-nav-link class="nav__link">Saved</a>
+            </li>
+            <li class="nav__item">
+              <a href="/digest" data-route="/digest" data-nav-link class="nav__link">Digest</a>
+            </li>
+            <li class="nav__item">
+              <a href="/settings" data-route="/settings" data-nav-link class="nav__link">Settings</a>
+            </li>
+            <li class="nav__item">
+              <a href="/proof" data-route="/proof" data-nav-link class="nav__link">Proof</a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
-      <section class="context-header">
-        <div class="text-max-width stack-vertical">
-          <h1 class="heading-xl context-header__headline">
-            Define how this job notification flow should behave.
-          </h1>
-          <p class="body-large text-muted context-header__subtext">
-            Use this workspace to specify rules, expectations, and proof for how notifications should
-            work. Keep language direct and practical.
-          </p>
-        </div>
-      </section>
-
-      <main class="workspace">
-        <section class="workspace__primary">
-          <article class="card">
-            <header class="card__header">
-              <div class="stack-vertical">
-                <h2 class="card__title">Primary workspace example</h2>
-                <p class="body card__subtitle text-muted">
-                  This area is for the main task on the page. Use clear sections and predictable
-                  components. Avoid crowding.
-                </p>
-              </div>
-              <span class="tag tag--accent">Workspace</span>
-            </header>
-
-            <div class="card__section">
-              <div class="field">
-                <label class="field__label" for="workspace-goal">Workspace goal</label>
-                <p class="field__hint">
-                  State the purpose of this step in one sentence. Focus on outcomes, not features.
-                </p>
-                <input
-                  id="workspace-goal"
-                  class="field__input"
-                  type="text"
-                  placeholder="e.g., Ensure candidates reliably receive time‑sensitive job notifications."
-                />
-              </div>
-            </div>
-
-            <div class="card__section">
-              <div class="field">
-                <label class="field__label" for="workspace-criteria">What does “working” mean here?</label>
-                <p class="field__hint">
-                  Describe the observable criteria that prove this step is successful.
-                </p>
-                <textarea
-                  id="workspace-criteria"
-                  class="field__textarea"
-                  placeholder="Example: Notifications are delivered within X minutes, are not duplicated, and respect user quiet hours."
-                ></textarea>
-              </div>
-            </div>
-
-            <div class="card__section">
-              <div class="button-row">
-                <button type="button" class="btn btn--primary">Save workspace draft</button>
-                <button type="button" class="btn btn--secondary">Reset to template</button>
-                <button type="button" class="btn btn--ghost">View guidance</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <header class="card__header">
-              <div class="stack-vertical">
-                <h2 class="card__title">Error and empty state patterns</h2>
-                <p class="body card__subtitle text-muted">
-                  Use these blocks to keep problem and guidance messages consistent.
-                </p>
-              </div>
-            </header>
-
-            <div class="card__section">
-              <div class="stack-vertical">
-                <div class="callout callout--empty">
-                  <div class="callout__title">No notification rules defined yet</div>
-                  <div class="callout__body">
-                    Start by writing a single rule that describes when a notification should be sent.
-                    Focus on a real scenario rather than covering every edge case.
-                  </div>
-                </div>
-
-                <div class="callout callout--error">
-                  <div class="callout__title">We could not save these changes</div>
-                  <div class="callout__body">
-                    Your draft was not saved because the server did not respond. Keep this page open.
-                    Try again in a few minutes, or copy your text into a safe place before reloading.
-                  </div>
-                </div>
-
-                <div class="callout callout--success">
-                  <div class="callout__title">Draft saved</div>
-                  <div class="callout__body">
-                    Your current inputs are stored. You can refine them at any time before shipping
-                    this notification flow.
-                  </div>
-                </div>
-
-                <div class="callout callout--warning">
-                  <div class="callout__title">This configuration needs a quick review</div>
-                  <div class="callout__body">
-                    At least one rule overlaps with quiet hours. Confirm whether this is intentional
-                    before you ship.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
+      <main class="page-main">
+        <section class="context-header">
+          <div class="text-max-width stack-vertical">
+            <h1 class="heading-xl context-header__headline" data-route-heading></h1>
+            <p class="body-large text-muted context-header__subtext" data-route-subtext></p>
+          </div>
         </section>
-
-        <aside class="workspace__secondary">
-          <section class="card">
-            <header class="card__header">
-              <div class="stack-vertical">
-                <h2 class="card__title">Step explanation</h2>
-                <p class="body card__subtitle text-muted">
-                  Use this panel to explain why this step exists and what “done” looks like.
-                </p>
-              </div>
-              <span class="tag tag--warning">In Progress</span>
-            </header>
-
-            <div class="card__section">
-              <ul class="body text-muted list-standard">
-                <li>Clarify who should receive notifications and when.</li>
-                <li>Write criteria you can test in a real environment.</li>
-                <li>Capture edge cases separately instead of mixing them into the main rule.</li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="card">
-            <header class="card__header">
-              <div class="stack-vertical">
-                <h2 class="card__title">Copyable prompt</h2>
-                <p class="body card__subtitle text-muted">
-                  This box is for prompts you may reuse elsewhere. Keep them short and specific.
-                </p>
-              </div>
-            </header>
-
-            <div class="card__section">
-              <div class="prompt-box">
-                <p class="body">
-                  “You are helping design a job notification flow. Propose a simple rule for when to
-                  notify candidates so that notifications are timely, not duplicated, and respectful of
-                  quiet hours. Keep the rule to three sentences.”
-                </p>
-              </div>
-            </div>
-
-            <div class="card__section">
-              <div class="button-row">
-                <button type="button" class="btn btn--secondary">Copy prompt</button>
-                <button type="button" class="btn btn--ghost">Replace with my wording</button>
-              </div>
-            </div>
-          </section>
-        </aside>
       </main>
 
       <footer class="proof-footer">
@@ -209,6 +91,7 @@
         </ul>
       </footer>
     </div>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>
 
