@@ -1,0 +1,11 @@
+{
+  "name": "job-notification-app-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "preview": "echo \"Open src/index.html in a browser to view the design system.\""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
+
