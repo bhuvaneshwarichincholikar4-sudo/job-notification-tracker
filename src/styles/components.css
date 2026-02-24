@@ -517,6 +517,13 @@
   color: var(--color-text-muted);
 }
 
+.job-card__tags {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: flex-end;
+}
+
 .modal {
   position: fixed;
   inset: 0;
@@ -576,6 +583,28 @@
 .skill-pill {
   border-radius: var(--radius-md);
   border-color: var(--color-border-subtle);
+}
+
+.tag--score-high {
+  border-color: var(--color-success);
+  color: var(--color-success);
+  background-color: var(--color-success-soft);
+}
+
+.tag--score-medium {
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+  background-color: var(--color-warning-soft);
+}
+
+.tag--score-neutral {
+  border-color: var(--color-border-subtle);
+  color: var(--color-text);
+}
+
+.tag--score-low {
+  border-color: var(--color-border-subtle);
+  color: var(--color-text-muted);
 }
 
 @media (max-width: 720px) {
